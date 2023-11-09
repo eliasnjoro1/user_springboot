@@ -1,0 +1,25 @@
+<html xmnlns:th="http://www.thymeleaf.org">
+	<Head>
+		<Title>Registration</Title>
+	</Head>
+	<body>
+		<h2>Register</h2>
+		
+		<form th:action="@{/registration}" method="post" th:object="${User}"></form>
+		
+		Enter fullname:<INPUT type="text" id="fullname" th:field="*{fullname}"><br><br>
+		Enter emailaddress:<INPUT type="text" id="emailaddress" th:field="*{emailaddress}"><br><br>
+		Enter country :<INPUT type="text" id="country" th:field="*{country}"><br><br>
+		Enter phonenumber:<INPUT type="text" id="phonenumber" th:field="*{phonenumber}"><br><br>
+		Enter password:<INPUT type="text" id="password" th:field="*{password}"><br><br>
+		Enter confirmpassword:<INPUT type="text" id="confirmpassword" th:field="*{confirmpassword}"><br><br>
+		
+		select gender:Male<input type="radio" id="gender" value="Male" th:field="*{gender}"><br><br>
+		             Female<input type="radio" id="gender" value="Female" th:field="*{gender}"<br><br>
+		<label>select medicalaccount</label>
+		corporate_insurance<input type="checkbox" Id="corporate_insurance" value="corporate_insurance" th:field="{medicalaccount}">
+		self/family_insurance<input type="checkbox" Id="self/family_insurance" value="self/family_insurance" th:field="{medicalaccount}">
+		
+		<button type="submit">save</button>
+		</body>
+</html>
